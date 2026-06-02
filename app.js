@@ -7,6 +7,15 @@ const options = {
 		'Content-Type': 'application/json'
 	}
 };
+const cloud_pct = document.getElementById("cloud_pct");
+const temp = document.getElementById("temp");
+const feels_like = document.getElementById("feels_like");
+const humidity = document.getElementById("humidity");
+const min_temp = document.getElementById("min_temp");
+const max_temp = document.getElementById("max_temp");
+const wind_speed = document.getElementById("wind_speed");
+const sunrise = document.getElementById("sunrise");
+const sunset = document.getElementById("sunset");
 
 
 	fetch(url, options)
