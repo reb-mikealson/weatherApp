@@ -8,10 +8,22 @@ const options = {
 	}
 };
 
-try {
-	const response = await fetch(url, options);
-	const result = await response.text();
-	console.log(result);
-} catch (error) {
-	console.error(error);
-}
+
+	fetch(url, options)
+  .then(response => response.json())
+  .then(response => {
+
+    console.log(response);
+
+    cloud_pct.innerHTML = response.cloud_pct;
+    temp.innerHTML = response.temp;
+    feels_like.innerHTML = response.feels_like;
+    humidity.innerHTML = response.humidity;
+    min_temp.innerHTML = response.min_temp;
+    max_temp.innerHTML = response.max_temp;
+    wind_speed.innerHTML = response.wind_speed;
+    sunrise.innerHTML = response.sunrise;
+    sunset.innerHTML = response.sunset;
+
+  })
+  .catch(err => console.error(err));
