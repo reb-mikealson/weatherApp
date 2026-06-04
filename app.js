@@ -8,7 +8,7 @@ const options = {
 	}
 };
 
-
+const getWeather = (city) => {
 	fetch(url, options)
   .then(response => response.json())
   .then(response => {
@@ -28,3 +28,4 @@ const options = {
 
   })
   .catch(err => console.error(err));
+}
