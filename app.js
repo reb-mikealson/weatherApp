@@ -9,6 +9,7 @@ const options = {
 };
 
 const getWeather = (city) => {
+  cityName.innerHTML = city
 	fetch(url, options)
   .then(response => response.json())
   .then(response => {
@@ -29,3 +30,7 @@ const getWeather = (city) => {
   })
   .catch(err => console.error(err));
 }
+submit.addEventListener("click", (e) => {
+getWerather(city.value)
+})
+getWeather("Bareilly")
