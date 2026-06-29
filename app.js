@@ -31,6 +31,7 @@ const getWeather = (city) => {
   .catch(err => console.error(err));
 }
 submit.addEventListener("click", (e) => {
-getWerather(city.value)
+e.preventDefault()
+getWeather(city.value)
 })
 getWeather("Bareilly")
